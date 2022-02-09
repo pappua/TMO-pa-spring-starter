@@ -33,9 +33,7 @@ public class LibraryController {
     }
     
     
-    @GetMapping(
-    		value="/api/books",
-    		produces= {MediaType.APPLICATION_JSON_VALUE})
+    @GetMapping(value="/api/books")
     public ArrayList<HashMap<String, Object>> getAllBooks() {
     	ArrayList<HashMap<String, Object>> allBooks = new ArrayList<HashMap<String, Object>>();
     	
