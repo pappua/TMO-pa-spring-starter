@@ -56,8 +56,8 @@ public class LibraryController {
     	bookMap3.put("yearPublished", 1984);
     	
     	allBooks.add(bookMap2);
-    	allBooks.add(bookMap1);
     	allBooks.add(bookMap3);
+    	allBooks.add(bookMap1);
     	
     	return allBooks;
     }
