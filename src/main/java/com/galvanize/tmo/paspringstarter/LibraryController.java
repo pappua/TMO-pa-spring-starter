@@ -36,7 +36,7 @@ public class LibraryController {
     @GetMapping(
     		value="/api/books",
     		produces= {MediaType.APPLICATION_JSON_VALUE})
-    public ArrayList<HashMap<String, Object>> getBooks() {
+    public ArrayList<HashMap<String, Object>> getAllBooks() {
     	ArrayList<HashMap<String, Object>> allBooks = new ArrayList<HashMap<String, Object>>();
     	
     	HashMap<String, Object> bookMap1 = new HashMap<String, Object>();
@@ -57,9 +57,9 @@ public class LibraryController {
     	bookMap3.put("title", "Neuromancer");
     	bookMap3.put("yearPublished", 1984);
     	
-    	allBooks.add(bookMap1);
     	allBooks.add(bookMap2);
     	allBooks.add(bookMap3);
+    	allBooks.add(bookMap1);
     	
     	return allBooks;
     }
