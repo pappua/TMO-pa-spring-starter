@@ -34,7 +34,7 @@ public class LibraryController {
     
     
     @GetMapping(value="/api/books")
-    public ArrayList<HashMap<String, Object>> getAllBooks() {
+    public HashMap<String, Object> getAllBooks() {
     	ArrayList<HashMap<String, Object>> allBooks = new ArrayList<HashMap<String, Object>>();
     	
     	HashMap<String, Object> bookMap1 = new HashMap<String, Object>();
@@ -59,7 +59,10 @@ public class LibraryController {
     	allBooks.add(bookMap3);
     	allBooks.add(bookMap1);
     	
-    	return allBooks;
+    	HashMap<String, Object> returnValue = new HashMap<String, Object>();
+    	returnValue.put("books", allBooks);
+    	
+    	return returnValue;
     }
     
     @DeleteMapping(value="/api/books")
